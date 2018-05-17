@@ -1,7 +1,8 @@
+//set
 public void reflectSet() {
     Demo demo = new Demo();
     Method[] methods = demo.getClass().getMethods();//class's method
-    //set
+    
     for (Method method : methods) {
         String methodName = method.getName();
         if (methodName.startsWith("set")) {//if start with 'set'
@@ -16,6 +17,7 @@ public void reflectSet() {
     }
 }
 
+//get
 public void reflectGet() {
     Demo demo = new Demo();
     Method[] methods = demo.getClass().getMethods();//class's method
@@ -30,7 +32,6 @@ public void reflectGet() {
             } catch (InvocationTargetException e) {
                 e.printStackTrace();
             }
-            System.out.println(value);
         }
     }
 }
