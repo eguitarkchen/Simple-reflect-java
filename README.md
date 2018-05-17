@@ -5,7 +5,7 @@ Reflect to run method get or set (DEMO)
     public void reflectSet() {
         Demo demo = new Demo();
         Method[] methods = demo.getClass().getMethods();//class's method
-        //or can use 'demo.getClass().getMethod("getId",Integer.class);' to get a method of specific name , then same to invoke
+        //or can use 'demo.getClass().getMethod("getId",Integer.class);' to get a method of specific name
 
         for (Method method : methods) {
             String methodName = method.getName();
